@@ -1,0 +1,32 @@
+[
+    {
+        "nombre": "Harry Potter y la Piedra Filosofal",
+        "autor": "J.K. Rowling",
+        "precio": 1000,
+        "imagen": "assets/images/book1.jpg"
+    },
+    {
+        "nombre": "El Principito",
+        "autor": "Antoine de Saint-Exupéry",
+        "precio": 1000,
+        "imagen": "assets/images/book2.jpg"
+    },
+    {
+        "nombre": "1984",
+        "autor": "George Orwell",
+        "precio": 1000,
+        "imagen": "assets/images/book3.jpg"
+    },
+    {
+        "nombre": "El Padrino",
+        "autor": "Mario Puzo",
+        "precio": 1000,
+        "imagen": "assets/images/book4.jpg"
+    },
+    {
+        "nombre": "La Metamorfosis",
+        "autor": "Franz Kafka",
+        "precio": 1000,
+        "imagen": "assets/images/book5.jpg"
+    }
+]
