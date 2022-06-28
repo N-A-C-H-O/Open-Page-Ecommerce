@@ -5,16 +5,17 @@ const agregarProductos = datos => {
         let nuevaCard = document.createElement("div");
         nuevaCard.innerHTML = 
         `
-        <img src=${elemento.imagen} class="card-img-top" alt="Imagen libro">
-        <div class="card-body">
-            <h5 class="card-title">${elemento.nombre}</h5>
-            <p class="card-text">${elemento.autor}</p>
-            <p class="card-text">$${elemento.precio}</p>
-            <button id="btnComprar${elemento.id}" class="btn btn-primary">Comprar</button>
+        <div class="card mx-3" style="width: 14rem">
+            <img src=${elemento.imagen} class="card-img-top" alt="Imagen libro">
+            <div class="card-body text-center">
+                <h5 class="card-title">${elemento.nombre}</h5>
+                <p class="card-text">${elemento.autor}</p>
+                <p class="card-text">$${elemento.precio}</p>
+                <button id="btnComprar${elemento.id}" class="btn btn-primary">Comprar</button>
+            </div>
         </div>
         `;
-        nuevaCard.setAttribute('class','card mx-3');
-        nuevaCard.style.width = '16rem';
+        nuevaCard.setAttribute('class','m-auto my-5')
         contenedorPrincipal.append(nuevaCard);
 
         // Funcionalidad agregar al carrito 
@@ -24,6 +25,7 @@ const agregarProductos = datos => {
             elemento.cantidad++;
             if (controlador !== true) {
                 carrito.push(elemento);
+                document.getElementById('contadorCarrito').innerHTML = carrito.length;
                 let elementoCarrito = document.createElement('tr');
                 elementoCarrito.innerHTML = 
                 `
@@ -57,6 +59,7 @@ tablaCarrito.addEventListener('click',(e) => {
                 carrito.splice(i,1);
                 document.getElementById(e.target.dataset.producto).remove();
                 document.getElementById('totalCarrito').innerHTML = "$" + carrito.reduce((acumulador,elemento) => (elemento.precio * elemento.cantidad) + acumulador, 0);
+                document.getElementById('contadorCarrito').innerHTML = carrito.length;
             }
             
         }

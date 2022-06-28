@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #2d2d34;
+    background-color: #d8d2d8;
+}
+
+.logo {
+    width: 40%;
+}
+
+/* Navbar */
+
+nav, 
+.nav-container {
+    background-color: #f1dee4;
+}
+
+#contadorCarrito {
+    background-color: #b97375;
+    color: white;
+}
+
+/* Container */
+
