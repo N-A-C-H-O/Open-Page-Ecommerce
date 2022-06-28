@@ -19,10 +19,36 @@ nav,
     background-color: #f1dee4;
 }
 
+#btnCarrito {
+    border: none;
+}
+
+#btnCarrito:focus {
+    border: none;
+}
+
 #contadorCarrito {
     background-color: #b97375;
     color: white;
 }
 
-/* Container */
+/* Contenedor */
 
+.boton-comprar {
+    background-color: #ceb1be;
+    border: none;
+}
+
+.boton-comprar:hover {
+    border: none;
+    background-color: #ceb1bea7;
+}
+
+.boton-comprar:focus {
+    background-color: #ceb1be;
+    border: none;
+}
+
+#btnEliminar {
+    font-size: 0.6em;
+}

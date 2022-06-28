@@ -11,7 +11,7 @@ const agregarProductos = datos => {
                 <h5 class="card-title">${elemento.nombre}</h5>
                 <p class="card-text">${elemento.autor}</p>
                 <p class="card-text">$${elemento.precio}</p>
-                <button id="btnComprar${elemento.id}" class="btn btn-primary">Comprar</button>
+                <button id="btnComprar${elemento.id}" class="boton-comprar btn">Comprar</button>
             </div>
         </div>
         `;
@@ -33,7 +33,7 @@ const agregarProductos = datos => {
                     <td>${elemento.nombre}</td>
                     <td id="precioElemento${elemento.id}">$${elemento.precio}</td>
                     <td id="cantidadElemento${elemento.id}" >${elemento.cantidad}</td>
-                    <td><a class="btn btn-danger" id="btnEliminar" data-producto=${elemento.id}>Eliminar</a></td>
+                    <td><a class="btn btn-danger" id="btnEliminar" data-producto=${elemento.id}><i class="fa-solid fa-x"></i></a></td>
                 `;
                 elementoCarrito.setAttribute('id',`${elemento.id}`);
                 document.getElementById('tablaCarrito').append(elementoCarrito);;
