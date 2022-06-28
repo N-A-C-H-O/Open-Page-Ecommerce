@@ -53,10 +53,12 @@ tablaCarrito.addEventListener('click',(e) => {
     if (e.target.id === 'btnEliminar') {
         for (const i in carrito) {
             if (carrito[i].id == e.target.dataset.producto) {
+                carrito[i].cantidad = 0;
                 carrito.splice(i,1);
                 document.getElementById(e.target.dataset.producto).remove();
                 document.getElementById('totalCarrito').innerHTML = "$" + carrito.reduce((acumulador,elemento) => (elemento.precio * elemento.cantidad) + acumulador, 0);
             }
+            
         }
     }
 })
