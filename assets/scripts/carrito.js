@@ -19,9 +19,18 @@ const agregarProductos = datos => {
         contenedorPrincipal.append(nuevaCard);
 
         // Funcionalidad agregar al carrito 
-
+        
         document.getElementById(`btnComprar${elemento.id}`).addEventListener('click',() => {
             const controlador = carrito.includes(elemento);
+            Swal.fire({
+                position: 'bottom-end',
+                icon: 'success',
+                title: 'Agregado al carrito',
+                showConfirmButton: false,
+                timer: 1200,
+                width: '30em',
+                background: '#3d3d47'
+            })
             elemento.cantidad++;
             if (controlador !== true) {
                 carrito.push(elemento);
@@ -63,6 +72,31 @@ tablaCarrito.addEventListener('click',(e) => {
             }
             
         }
+    }
+})
+
+botonCompraFinal.addEventListener('click', () => {
+    if (carrito.length !== 0) {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Compra exitosa',
+            showConfirmButton: false,
+            timer: 1500,
+            width: '35em',
+            background: '#fcf7f9'
+        })
+    }
+    else {
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'El carrito está vacío',
+            showConfirmButton: false,
+            timer: 1500,
+            width: '35em',
+            background: '#fcf7f9'
+        })
     }
 })
 
