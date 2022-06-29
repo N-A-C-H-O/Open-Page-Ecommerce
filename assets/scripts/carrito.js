@@ -5,12 +5,12 @@ const agregarProductos = datos => {
         let nuevaCard = document.createElement("div");
         nuevaCard.innerHTML = 
         `
-        <div class="card mx-3" style="width: 14rem">
+        <div class="card mx-3" style="width: 18rem">
             <img src=${elemento.imagen} class="card-img-top" alt="Imagen libro">
             <div class="card-body text-center">
                 <h5 class="card-title">${elemento.nombre}</h5>
                 <p class="card-text">${elemento.autor}</p>
-                <p class="card-text">$${elemento.precio}</p>
+                <p class="card-text bold fs-5 text-success">$${elemento.precio}</p>
                 <button id="btnComprar${elemento.id}" class="boton-comprar btn">Comprar</button>
             </div>
         </div>
